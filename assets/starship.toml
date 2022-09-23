@@ -1,0 +1,174 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# format = """
+# (bold green)$directory$docker_context$package
+# [─>](bold green) 
+# """
+
+format = """
+$username\
+$hostname\
+$localip\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$docker_context\
+$nodejs\
+$php\
+$rust\
+$memory_usage\
+$sudo\
+$cmd_duration\
+$line_break\
+$character"""
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character] # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+[directory]
+format = "[ $path ]($style)"
+# truncation_length = 2
+
+[directory.substitutions]
+"/workspace/**" = " "
+
+[bun]
+disabled = true
+format = "via [$symbol]($style)"
+
+[buf]
+disabled = true
+format = "via [$symbol]($style)"
+
+[cmake]
+disabled = true
+format = "via [$symbol]($style)"
+
+[cobol]
+disabled = true
+format = "via [$symbol]($style)"
+
+[crystal]
+disabled = true
+format = "via [$symbol]($style)"
+
+[daml]
+disabled = true
+format = "via [$symbol]($style)"
+
+[dart]
+disabled = true
+format = "via [$symbol]($style)"
+
+[deno]
+disabled = true
+format = "via [$symbol]($style)"
+
+[dotnet]
+disabled = true
+format = "[$symbol(🎯 $tfm )]($style)"
+
+[elixir]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[elm]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[erlang]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[golang]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[helm]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[julia]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[kotlin]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[lua]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[nim]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[nodejs]
+format = 'via [$symbol]($style)'
+
+[ocaml]
+disabled = true
+format = 'via [$symbol(\($switch_indicator$switch_name\) )]($style)'
+
+[perl]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[php]
+format = 'via [$symbol]($style)'
+
+[pulumi]
+disabled = true
+format = 'via [$symbol$stack]($style)'
+
+[purescript]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[python]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[raku]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[red]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[rlang]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[ruby]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[rust]
+format = 'via [$symbol]($style)'
+
+[swift]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[vagrant]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[vlang]
+disabled = true
+format = 'via [$symbol]($style)'
+
+[zig]
+disabled = true
+format = 'via [$symbol]($style)'
