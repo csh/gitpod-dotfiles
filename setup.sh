@@ -1,6 +1,15 @@
-# Setup aliases
+#!/bin/bash
 
-cp assets/.bash_aliases ~/
+TMPDIR=$(mktemp -d)
 
-# Install starship.rs
-source assets/install-starship.sh
+CURRENT=$PWD
+
+cd $TMPDIR
+
+for script in ~/.dotfiles/scripts/*; do
+  bash "$script"
+done
+
+cd $CURRENT
+
+rm -rf $TMPDIR
